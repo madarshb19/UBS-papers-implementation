@@ -20,8 +20,12 @@ I think of reservoirs as these black-box processors which process inputs and map
 unlike trainable NNs. Reservoir is essentially the ground-truth which drives a particular system (ex : the exact function driving the time series).
 
 The advantage of a reservoir is that since its not trained, its computationally efficient and easy to map to higher-order output space.
+Note that calculating signatures (evaluating iterated integrals) is exponential with d where d: number of dimensions
 
 ## Johnson-Lindenstrauss argument 
 
 This is apparently the foundation of why dimensionality reduction works. It states "Any set of n points in high-dimensional space can be embedded into a much lower-dimensional space while
 approximately preserving pairwise Euclidean distances, with high probability."
+This argument ensures using randomized signatures with k dimensions can sufficiently approximate a very high-dimensional space
+
+## Euler-Mayurama method (Approximating solutions of SDEs)
